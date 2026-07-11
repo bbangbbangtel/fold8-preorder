@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>갤럭시 Z 폴드8 · 플립8 사전예약 | 휴대폰싸게파는사람들</title>
+<style>
+@font-face{
+  font-family:'Pretendard';
+  src:url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2/PretendardVariable.woff2') format('woff2-variations');
+  font-weight:45 920;
+}
+
+:root{
+  --bg:#1B1F2B;
+  --panel:#242938;
+  --panel-2:#2C3242;
+  --line:#3A4152;
+  --text:#F2F4F8;
+  --muted:#9CA3B8;
+  --accent:#8B7CF6;
+  --accent-2:#5EE6C4;
+  --gold:#F2B33D;
+  --radius:18px;
+}
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(139,124,246,0.16), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(94,230,196,0.10), transparent 55%),
+    var(--bg);
+  color:var(--text);
+  font-family:'Pretendard', -apple-system, BlinkMacSystemFont, 'Malgun Gothic', sans-serif;
+  -webkit-font-smoothing:antialiased;
+  min-height:100vh;
+  line-height:1.5;
+}
+
+.wrap{
+  max-width:640px;
+  margin:0 auto;
+  padding:28px 20px 80px;
+}
+
+/* ---- Header / crease motif ---- */
+.header{
+  position:relative;
+  padding:34px 28px 32px;
+  border-radius:var(--radius);
+  background:linear-gradient(155deg,#2A2F40 0%, #232838 55%, #1E2230 100%);
+  border:1px solid var(--line);
+  overflow:hidden;
+  margin-bottom:22px;
+  text-align:center;
+}
+.crease{
+  position:absolute;
+  top:0; bottom:0; left:50%;
+  width:1px;
+  background:linear-gradient(to bottom, transparent, rgba(139,124,246,0.55), transparent);
+  transform:translateX(-50%);
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12.5px;
+  letter-spacing:0.04em;
+  color:var(--accent-2);
+  background:rgba(94,230,196,0.08);
+  border:1px solid rgba(94,230,196,0.25);
+  padding:6px 12px;
+  border-radius:999px;
+  margin-bottom:16px;
+}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 8px var(--accent-2);}
+h1{
+  font-size:28px;
+  font-weight:800;
+  margin:0 0 8px;
+  letter-spacing:-0.02em;
+  line-height:1.28;
+}
+h1 span{color:var(--accent);}
+.sub{
+  color:var(--muted);
+  font-size:14.5px;
+  margin:0;
+}
+.schedule{
+  display:flex;
+  gap:10px;
+  margin-top:22px;
+  flex-wrap:wrap;
+}
+.schedule .item{
+  flex:1 1 140px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 14px;
+  text-align:left;
+}
+.schedule .item b{
+  display:block;
+  font-size:13px;
+  color:var(--accent-2);
+  margin-bottom:4px;
+  font-weight:700;
+}
+.schedule .item span{font-size:13px;color:var(--muted);}
+.schedule-note{
+  font-size:11.5px;
+  color:var(--muted);
+  text-align:center;
+  margin:12px 0 0;
+  line-height:1.5;
+}
+
+.countdown{
+  display:flex;
+  gap:8px;
+  margin-top:18px;
+  background:#0D0F16;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px 12px;
+  align-items:center;
+}
+.countdown .cd-label{font-size:12.5px; color:var(--muted); white-space:nowrap; padding-right:4px;}
+.countdown .cd-nums{display:flex; gap:6px; flex:1;}
+.countdown .cd-box{flex:1; text-align:center;}
+.countdown .cd-box b{display:block; font-size:19px; font-weight:800; color:var(--gold); font-variant-numeric:tabular-nums;}
+.countdown .cd-box span{font-size:10.5px; color:var(--muted);}
+
+/* ---- Benefits ---- */
+.benefits{display:flex; flex-direction:column; gap:10px;}
+.benefit{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px;
+}
+.benefit .num{
+  flex:none;
+  width:30px;height:30px;
+  border-radius:9px;
+  background:rgba(242,179,61,0.15);
+  color:var(--gold);
+  font-weight:800;
+  font-size:13px;
+  display:flex; align-items:center; justify-content:center;
+}
+.benefit .tt{font-size:11.5px; color:var(--muted); margin-bottom:2px;}
+.benefit .dd{font-size:14px; font-weight:700;}
+
+.kakao-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-top:18px;
+  margin-bottom:22px;
+  padding:13px;
+  border-radius:12px;
+  background:#FEE500;
+  color:#3C1E1E;
+  font-weight:800;
+  font-size:14px;
+  text-decoration:none;
+  transition:filter .15s, transform .15s;
+}
+.kakao-btn:hover{filter:brightness(0.97);}
+.kakao-btn:active{transform:scale(0.99);}
+
+/* ---- Section ---- */
+.section{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  margin-bottom:16px;
+}
+.section h2{
+  font-size:15px;
+  font-weight:700;
+  margin:0 0 4px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.section h2 .n{
+  width:22px;height:22px;
+  border-radius:7px;
+  background:rgba(139,124,246,0.15);
+  color:var(--accent);
+  font-size:12px;
+  display:inline-flex;
+  align-items:center;justify-content:center;
+  font-weight:800;
+}
+.section .hint{color:var(--muted);font-size:12.5px;margin:0 0 18px 30px;}
+
+/* ---- Model cards ---- */
+.models{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+@media(min-width:480px){
+  .models{grid-template-columns:1fr 1fr 1fr;}
+}
+.model{
+  position:relative;
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  border-radius:14px;
+  padding:16px 14px;
+  cursor:pointer;
+  transition:border-color .15s, background .15s, transform .15s;
+}
+.model:hover{border-color:#3A3F52; transform:translateY(-1px);}
+.model input{position:absolute; opacity:0; pointer-events:none;}
+.model .tag{
+  font-size:10.5px;
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:0.03em;
+  margin-bottom:6px;
+  display:block;
+}
+.model .name{font-size:15px;font-weight:800;margin-bottom:3px;}
+.model .desc{font-size:12px;color:var(--muted);}
+.model.selected{
+  border-color:var(--accent);
+  background:linear-gradient(160deg, rgba(139,124,246,0.14), rgba(139,124,246,0.03));
+  box-shadow:0 0 0 1px rgba(139,124,246,0.4) inset;
+}
+.model.selected::after{
+  content:"✓";
+  position:absolute; top:10px; right:12px;
+  color:var(--accent); font-weight:900; font-size:13px;
+}
+
+/* ---- Chip groups (storage / color) ---- */
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  color:var(--text);
+  padding:9px 16px;
+  border-radius:999px;
+  font-size:13.5px;
+  cursor:pointer;
+  user-select:none;
+  transition:border-color .15s, background .15s;
+}
+.chip input{position:absolute; opacity:0; pointer-events:none;}
+.chip.selected{border-color:var(--accent-2); background:rgba(94,230,196,0.12); color:var(--accent-2); font-weight:700;}
+
+/* ---- Form fields ---- */
+.field{margin-bottom:16px;}
+.field:last-child{margin-bottom:0;}
+label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:7px;
+  font-weight:600;
+}
+input[type=text], input[type=tel], select, textarea{
+  width:100%;
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  color:var(--text);
+  border-radius:11px;
+  padding:13px 14px;
+  font-size:15px;
+  font-family:inherit;
+  outline:none;
+  transition:border-color .15s;
+}
+input[type=text]:focus, input[type=tel]:focus, select:focus, textarea:focus{
+  border-color:var(--accent);
+}
+textarea{resize:vertical; min-height:70px;}
+.row2{display:grid; grid-template-columns:1fr; gap:14px;}
+@media(min-width:480px){.row2{grid-template-columns:1fr 1fr;}}
+
+.radio-line{display:flex; gap:10px; flex-wrap:wrap;}
+.rl-opt{
+  flex:1 1 90px;
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  border-radius:11px;
+  padding:11px;
+  text-align:center;
+  font-size:13.5px;
+  cursor:pointer;
+}
+.rl-opt input{position:absolute;opacity:0;pointer-events:none;}
+.rl-opt.selected{border-color:var(--accent); background:rgba(139,124,246,0.12); color:var(--accent); font-weight:700;}
+
+/* ---- Submit ---- */
+.submit-wrap{margin-top:20px;}
+button.submit{
+  width:100%;
+  padding:17px;
+  border:none;
+  border-radius:13px;
+  background:linear-gradient(120deg, var(--accent), #6E5DE0);
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:-0.01em;
+  cursor:pointer;
+  transition:filter .15s, transform .15s;
+}
+button.submit:hover{filter:brightness(1.08);}
+button.submit:active{transform:scale(0.99);}
+button.submit:disabled{opacity:0.6; cursor:not-allowed;}
+.privacy{font-size:11.5px; color:var(--muted); margin-top:12px; text-align:center;}
+
+.foot{
+  text-align:center;
+  color:var(--muted);
+  font-size:12.5px;
+  margin-top:28px;
+}
+.foot b{color:var(--text);}
+
+/* ---- Success state ---- */
+.success{
+  display:none;
+  text-align:center;
+  padding:50px 24px;
+}
+.success .check{
+  width:64px;height:64px;
+  border-radius:50%;
+  background:rgba(94,230,196,0.14);
+  border:1px solid rgba(94,230,196,0.4);
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 18px;
+  font-size:28px;
+  color:var(--accent-2);
+}
+.success h3{font-size:20px; margin:0 0 8px;}
+.success p{color:var(--muted); font-size:14px; margin:0 0 4px;}
+
+/* ---- Terms / consent blocks ---- */
+.terms-block{
+  border:1px solid var(--line);
+  background:var(--panel-2);
+  border-radius:14px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.terms-block:last-child{margin-bottom:0;}
+.terms-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:14px 16px;
+}
+.terms-check{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  font-size:13.5px;
+  font-weight:700;
+}
+.terms-check input{
+  width:18px; height:18px;
+  accent-color:var(--accent);
+  flex:none;
+}
+.terms-toggle{
+  flex:none;
+  background:none;
+  border:none;
+  color:var(--muted);
+  font-size:12.5px;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  cursor:pointer;
+  padding:4px 6px;
+  font-family:inherit;
+}
+.terms-toggle .chev{
+  display:inline-block;
+  transition:transform .2s;
+  font-size:13px;
+}
+.terms-toggle.open .chev{transform:rotate(180deg);}
+.terms-body{
+  display:none;
+  padding:2px 18px 18px;
+  border-top:1px solid var(--line);
+  padding-top:14px;
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.7;
+}
+.terms-body.open{display:block;}
+.terms-body p{margin:0 0 12px;}
+.terms-body p:last-child{margin-bottom:0;}
+.terms-body b{color:var(--text); font-size:12.5px;}
+.terms-body .terms-note{
+  background:rgba(242,179,61,0.08);
+  border:1px solid rgba(242,179,61,0.25);
+  border-radius:9px;
+  padding:10px 12px;
+  color:var(--text);
+  font-size:11.5px;
+}
+
+/* ---- Hero visual ---- */
+.hero-visual{
+  position:relative;
+  height:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:22px;
+  padding-top:6px;
+}
+.hero-glow{
+  position:absolute;
+  width:300px; height:210px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(139,124,246,0.35), rgba(94,230,196,0.12) 55%, transparent 75%);
+  filter:blur(10px);
+}
+.hero-svg{
+  position:relative;
+  width:100%;
+  max-width:340px;
+  height:auto;
+  filter:drop-shadow(0 18px 26px rgba(0,0,0,0.4));
+}
+
+.model-pill-row{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:10px 18px;
+  font-size:13px;
+  font-weight:700;
+  color:var(--text);
+  margin-top:18px;
+}
+.model-pill-row .sep{color:var(--muted); font-weight:400;}
+
+.hero-title-wrap{text-align:center;}
+.hero-title-wrap .sub{margin:10px auto 0; max-width:420px;}
+
+::selection{background:rgba(139,124,246,0.35);}
+
+@media(prefers-reduced-motion: reduce){
+  *{transition:none !important;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+
+    <div class="hero-title-wrap">
+      <span class="eyebrow"><span class="dot"></span>NEW GALAXY 폴더블 · 사전예약</span>
+      <h1>Galaxy Z <span>Fold8</span> · Flip8<br>사전예약 신청</h1>
+      <div class="model-pill-row">Z플립8 <span class="sep">·</span> Z폴드8 <span class="sep">·</span> Z폴드8 와이드</div>
+    </div>
+
+    <a href="http://pf.kakao.com/_nQXxdn/chat" target="_blank" rel="noopener" class="kakao-btn">
+      💬 카카오톡 채널로 바로 상담하기
+    </a>
+    <div class="schedule">
+      <div class="item"><b>7.22</b><span>언팩 공개</span></div>
+      <div class="item"><b>7.28–8.3</b><span>사전예약 접수</span></div>
+      <div class="item"><b>8.4</b><span>사전개통 시작</span></div>
+      <div class="item"><b>8.7</b><span>정식 출시</span></div>
+    </div>
+    <p class="schedule-note">※ 위 일정은 현재까지 알려진 정보를 바탕으로 하며, 삼성전자의 공식 발표에 따라 변경될 수 있습니다.</p>
+  </div>
+
+  <div class="section">
+    <h2 style="margin-bottom:14px;">🎁 사전예약 신청 시 4가지 혜택</h2>
+    <div class="benefits">
+      <div class="benefit"><div class="num">01</div><div><div class="dd">통신사 지원금 최대 한도까지 지원</div></div></div>
+      <div class="benefit"><div class="num">02</div><div><div class="dd">삼성 공식 혜택까지 그대로</div></div></div>
+      <div class="benefit"><div class="num">03</div><div><div class="dd">매장지원금 95% 지원</div></div></div>
+      <div class="benefit"><div class="num">04</div><div><div class="dd">선택 기기 색상 보장</div></div></div>
+    </div>
+  </div>
+
+  <form id="preorderForm">
+
+    <div class="section">
+      <h2><span class="n">1</span>모델 선택</h2>
+      <p class="hint">원하시는 모델을 선택해주세요</p>
+      <div class="models" id="modelGroup">
+        <label class="model" data-value="폴드8">
+          <input type="radio" name="model" value="폴드8">
+          <span class="tag">STANDARD</span>
+          <div class="name">갤럭시 Z 폴드8</div>
+          <div class="desc">정통 세로형 폼팩터</div>
+        </label>
+        <label class="model" data-value="폴드8 와이드">
+          <input type="radio" name="model" value="폴드8 와이드">
+          <span class="tag">NEW · 최상위</span>
+          <div class="name">Z폴드8 와이드</div>
+          <div class="desc">신규 와이드 폼팩터</div>
+        </label>
+        <label class="model" data-value="플립8">
+          <input type="radio" name="model" value="플립8">
+          <span class="tag">COMPACT</span>
+          <div class="name">갤럭시 Z 플립8</div>
+          <div class="desc">클램셸 폴더블</div>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="n">2</span>가입 방식</h2>
+      <p class="hint">해당하는 방식을 선택해주세요</p>
+      <div class="radio-line" id="planGroup">
+        <label class="rl-opt" data-value="번호이동"><input type="radio" name="plan" value="번호이동">번호이동</label>
+        <label class="rl-opt" data-value="기기변경"><input type="radio" name="plan" value="기기변경">기기변경</label>
+        <label class="rl-opt" data-value="신규가입"><input type="radio" name="plan" value="신규가입">신규가입</label>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="n">3</span>신청자 정보</h2>
+      <div class="field">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="홍길동" required>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="birth">생년월일 (6자리)</label>
+          <input type="text" id="birth" name="birth" placeholder="예: 900101" maxlength="6" inputmode="numeric" required>
+        </div>
+        <div class="field">
+          <label for="phone">연락처</label>
+          <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="carrier">기존 통신사</label>
+          <select id="carrier" name="carrier" required>
+            <option value="" disabled selected>선택</option>
+            <option>SKT</option>
+            <option>KT</option>
+            <option>LG U+</option>
+            <option>알뜰폰 / 기타</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="newCarrier">구매(개통) 희망 통신사</label>
+          <select id="newCarrier" name="newCarrier" required>
+            <option value="" disabled selected>선택</option>
+            <option>SKT</option>
+            <option>KT</option>
+            <option>LG U+</option>
+            <option>알뜰폰 / 기타</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="currentDevice">현재 사용 기종 및 중고매입 (선택)</label>
+        <input type="text" id="currentDevice" name="currentDevice" placeholder="예: 갤럭시 Z폴드6 / 아이폰 15 Pro">
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="n">4</span>약관을 확인해 주세요</h2>
+
+      <div class="terms-block">
+        <div class="terms-top">
+          <label class="terms-check">
+            <input type="checkbox" id="agree" required>
+            <span>[필수] 개인정보 수집·이용 동의</span>
+          </label>
+          <button type="button" class="terms-toggle" data-target="termsPrivacy">내용 보기 <span class="chev">⌄</span></button>
+        </div>
+        <div class="terms-body" id="termsPrivacy">
+          <p><b>수집하는 개인정보 항목</b><br>
+          · 필수 항목: 성함, 휴대전화번호<br>
+          · 상담 진행을 위한 선택 정보: 기존/희망 통신사, 관심 기종 및 색상, 방문 희망 매장</p>
+          <p><b>정보를 사용하는 목적</b><br>
+          갤럭시 Z 폴더블8 사전예약 상담 진행, 가격 및 혜택 안내, 개통 절차 안내를 위해 사용됩니다.</p>
+          <p><b>보관 기간</b><br>
+          신청일로부터 6개월간 보관하며, 상담이 종료되거나 동의를 철회하시면 지체 없이 파기합니다.</p>
+          <p class="terms-note">동의는 거부하실 수 있습니다. 다만 동의하지 않으실 경우 사전예약 상담과 혜택 안내를 도와드리기 어려운 점 양해 부탁드립니다.</p>
+        </div>
+      </div>
+
+      <div class="terms-block">
+        <div class="terms-top">
+          <label class="terms-check">
+            <input type="checkbox" id="agreeMarketing">
+            <span>[선택] 마케팅 정보 수신 동의</span>
+          </label>
+          <button type="button" class="terms-toggle" data-target="termsMarketing">내용 보기 <span class="chev">⌄</span></button>
+        </div>
+        <div class="terms-body" id="termsMarketing">
+          <p><b>수집하는 정보 및 방법</b><br>
+          · 신청서 작성 시 직접 입력해 주신 연락처를 통해 수집합니다.</p>
+          <p><b>정보를 사용하는 목적</b><br>
+          · 신제품 및 이벤트 안내, 경품·사은품 제공, 매장 방문 행사 안내, 고객 맞춤 특가·판촉 정보를 문자(SMS) 및 전화로 안내하기 위해 사용됩니다.</p>
+          <p><b>보관 기간</b><br>
+          · 동의일로부터 수신 동의를 철회하시기 전까지 보관하며, 카카오톡 채널 또는 매장 연락처를 통해 언제든지 동의를 변경하거나 철회하실 수 있습니다.</p>
+          <p class="terms-note">동의는 선택사항입니다. 동의하지 않으셔도 사전예약 상담에는 영향이 없으나, 신규 혜택·이벤트 소식은 별도로 안내받기 어려울 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-wrap">
+      <button type="submit" class="submit" id="submitBtn">사전예약 신청하기</button>
+      <p class="privacy">문의 010-4191-1918 · 휴대폰싸게파는사람들<br>담당자가 순차적으로 연락드립니다.</p>
+    </div>
+  </form>
+
+  <div class="success" id="successView">
+    <div class="check">✓</div>
+    <h3>사전예약 신청이 접수되었어요</h3>
+    <p><b id="doneName"></b>님, 신청 감사합니다.</p>
+    <p>영업일 기준 1일 이내 담당자가 연락드립니다.</p>
+  </div>
+
+  <div class="foot">문의 <b>휴대폰싸게파는사람들(공구폰)</b> · 광주 광산구 장신로 134 1층<br>
+    <a href="http://pf.kakao.com/_nQXxdn/chat" target="_blank" rel="noopener" style="color:var(--accent-2); text-decoration:none;">카카오톡 채널 바로가기 →</a>
+  </div>
+</div>
+
+<script>
+// Terms "내용 보기" toggle
+document.querySelectorAll('.terms-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    const isOpen = target.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.firstChild.textContent = isOpen ? '접기 ' : '내용 보기 ';
+  });
+});
+
+// Selectable groups
+function setupGroup(groupId, selectedClass){
+  const group = document.getElementById(groupId);
+  const labels = group.querySelectorAll('label');
+  labels.forEach(label => {
+    label.addEventListener('click', () => {
+      labels.forEach(l => l.classList.remove('selected'));
+      label.classList.add('selected');
+    });
+  });
+}
+setupGroup('modelGroup');
+setupGroup('planGroup');
+
+// ===== Google Sheets 연동 =====
+// 아래 SCRIPT_URL 자리에 Google Apps Script 배포 URL을 넣으면
+// 신청 내용이 자동으로 구글 시트에 쌓입니다. (S26 폼과 동일한 방식)
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzvg1To3K8CSSVAjIvCYoDqXpRmHLUpYDMu1O-lrIw15W5eXGwJu2eiUm_8pvotS7I1-g/exec";
+
+const form = document.getElementById('preorderForm');
+const submitBtn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const model = form.querySelector('input[name="model"]:checked');
+  const plan = form.querySelector('input[name="plan"]:checked');
+
+  if(!model){ alert('모델을 선택해주세요.'); return; }
+  if(!plan){ alert('가입 방식을 선택해주세요.'); return; }
+  if(!document.getElementById('agree').checked){ alert('개인정보 수집 및 이용에 동의해주세요.'); return; }
+
+  const data = {
+    model: model.value,
+    plan: plan.value,
+    name: document.getElementById('name').value,
+    birth: document.getElementById('birth').value,
+    phone: document.getElementById('phone').value,
+    carrier: document.getElementById('carrier').value,
+    newCarrier: document.getElementById('newCarrier').value,
+    currentDevice: document.getElementById('currentDevice').value,
+    marketingAgree: document.getElementById('agreeMarketing').checked,
+    submittedAt: new Date().toISOString()
+  };
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "접수 중...";
+
+  function showSuccess(){
+    document.getElementById('doneName').textContent = data.name;
+    form.style.display = 'none';
+    document.getElementById('successView').style.display = 'block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  if(SCRIPT_URL){
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(data)
+    }).then(showSuccess).catch(showSuccess);
+  } else {
+    // 연동 전에는 콘솔에만 기록하고 완료 화면을 보여줍니다.
+    console.log('사전예약 신청 데이터:', data);
+    setTimeout(showSuccess, 400);
+  }
+});
+</script>
+</body>
+</html>
